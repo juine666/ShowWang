@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #effdf4;
+  --color-brand-100: #d8fbea;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-warning: #f59e0b;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100vw;
+  /* Disable tap highlight on mobile */
+  -webkit-tap-highlight-color: transparent;
+  background-color: #f3f4f6; /* Gray 100 for app background, looks good for cards */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Touch targets standard */
+button, .touch-target {
+  min-height: 44px;
+}
+
+/* Base resets */
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Hide scrollbar for horizontal scrolling containers */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
